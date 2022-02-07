@@ -15,10 +15,29 @@ public class BugZap extends PApplet
         smooth();
 
         playerX = width / 2;
-        playerY = height - 200;
+        playerY = height - 50;
         playerWidth = 50;
 		
 	}
+
+    float playerSpeed = 5;
+    public void keyPressed()
+	{
+		if (keyCode == LEFT)
+		{
+			System.out.println("Left arrow pressed");
+            playerX-=playerSpeed;
+		}
+		if (keyCode == RIGHT)
+		{
+			System.out.println("Right arrow pressed");
+            playerX+=playerSpeed;
+		}
+		if (key == ' ')
+		{
+			System.out.println("SPACE key pressed");
+		}
+	}	
 
 	
 	public void draw(){	
