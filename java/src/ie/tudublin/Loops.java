@@ -19,10 +19,16 @@ public class Loops extends PApplet
 
 	void drawRect(float x, float y){
 		
+		/*for(int i = 0; i < 500; i+=50){
+			noStroke();
+			fill(i,500,500);
+			rect(i,rectY,width / 10 ,height);
+		}First picture*/ 
+
 		for(int i = 0; i < 500; i+=50){
 		noStroke();
 		fill(i,500,500);
-		rect(i,rectY,width / 10 ,height);
+		rect(i,i,width / 10 ,height/10);
 		}
 	}
 	
