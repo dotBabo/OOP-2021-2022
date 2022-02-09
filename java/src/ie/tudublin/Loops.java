@@ -25,17 +25,23 @@ public class Loops extends PApplet
 			rect(i,rectY,width / 10 ,height);
 		}First picture*/ 
 
-		 for(int i = 0; i < 500; i+=50){
+		 /*for(int i = 0; i < 500; i+=50){
 		 noStroke();
 		 fill(i,500,500);
 		 rect(i,i,width/10  ,height/10);
-		 } //Second Picture and also part of third
+		 } *///Second Picture and also part of third
 		 
 
-		for(int i = 0; i < 500; i+=50){
+		/*for(int i = 0; i < 500; i+=50){
 			noStroke();
 			fill(i,500,500);
 			rect(450-i, i,width/10  ,height/10);
+		} */// third picture
+
+		for(int i = 500; i > 0 ;i-=50){
+			noStroke();
+			fill(i,500,500);
+			ellipse(250, 250, i, i);
 		}
 	}
 	
