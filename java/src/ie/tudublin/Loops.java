@@ -13,7 +13,7 @@ public class Loops extends PApplet
 	}
 
 	public void setup() {
-		colorMode(HSB,500);
+		colorMode(HSB);
 		
 	}
 
@@ -63,12 +63,41 @@ public class Loops extends PApplet
 	}
 
 	void drawCircles(){
-		for(int i = 25; i < 500; i+=50){
+		ellipseMode(CORNER);
+		float shapeHue = 0;
+		float shapeX = 0;
+        float shapeY = 0;
+        float size = 50;
+		for(int i = 0; i <10; i++){
 			noStroke();
-			fill(i,500,500);
-			ellipse(i, 25,width/10  ,height/10);
+			ellipse(shapeX, shapeY, size,size);
+			fill(shapeHue,255,255);
+			shapeHue =  (25 * i);
+			shapeX+=50;
 		} // third picture
 	}
+float offset;
+	void drawCircleGrid(){
+		noStroke();
+				ellipseMode(CORNER);
+                float shapeHue = 0;
+                float shapeY = 0;
+                float size = 50;
+                // horizontal
+                for (int i = 0; i < 10; i++)
+                {
+                    float shapeX = 0;
+                    shapeHue = 0 + 10 * i;
+                    for (int j = 0; j < 10; j++)
+                    {
+                        fill(shapeHue, 255, 255);
+                        ellipse(shapeX, shapeY, size,size);
+                        shapeHue += 10;
+                        shapeX += size;
+                    }
+                    shapeY += size;
+                }
+}
 	
 	public void draw()
 	{	
@@ -78,5 +107,6 @@ public class Loops extends PApplet
 		//drawX();
 		//drawEllipse();
 		drawCircles();
+
 	}
 }
