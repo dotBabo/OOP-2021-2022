@@ -32,7 +32,7 @@ public class Loops extends PApplet
 		float output;
 		a -= b;
 		c -= b;
-		e-= d;
+		e -= d;
 
 		output = ((a/c)*e) + d;
 
@@ -66,8 +66,30 @@ public class Loops extends PApplet
 				}
 				break;
 			case 1:
-			
+			{ 
+			background(0);
+				int squares = (int)(mouseX/20.0f);
+				float h = width/ (float) squares;
+				for(int i = 0; i <squares; i++){
+					noStroke();	
+					fill(map(i, 0,squares,0,255),255,255);
+					float x = map(i,0,squares,0,width);
+					rect(x,x,h,h);
+					rect((width - h) -x,x,h,h);
+				}
+			}
 				break;
+			
+			case 2:
+			background(0);
+				int circles = (int)(mouseX/20.0f);
+				float d = width / (float) circles;
+				for(int i= 0; i<circles; i++){
+					noStroke();
+					fill(map(i,0,circles,0,255),255,255);
+					circle(map(i,0,circles -1, d/2.0f,width- (d- 2.0f)),height/2,d);
+
+				}
 				//map(a,b,c,d,e);
 				//a = inputvalue
 				// b - c - start and end of the first range
