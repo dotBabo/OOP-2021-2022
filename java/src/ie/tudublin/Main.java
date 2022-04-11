@@ -96,7 +96,7 @@ public class Main
     }
     public static void main(String[] args)
     {
-        timing();
+        arrays();
 
         // Tara Misty
         // Tara Tara
